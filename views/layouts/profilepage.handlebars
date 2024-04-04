@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News Feed</title>
+  
+</head>
+<body>
+  <header>
+    <!-- Header content here -->
+  </header>
+  <main>
+    {{#each posts as |post|}}
+    <article class="post">
+      <div class="post-header">
+        <!-- Small text area for post title or user's name -->
+        <h2>{{post.user}}</h2>
+        <span class="timestamp">{{post.timestamp}}</span>
+      </div>
+      <div class="post-content">
+        <div class="post-image">
+          <!-- Assuming there is an image associated with each post -->
+          <img src="{{post.imageUrl}}" alt="Post image">
+        </div>
+        <div class="post-body">
+          <!-- Larger text area for the content of the post -->
+          <p>{{post.text}}</p>
+          <!-- Add other post content like buttons or links -->
+        </div>
+      </div>
+    </article>
+    {{else}}
+    <p>No posts to display.</p>
+    {{/each}}
+  </main>
+</body>
+</html>

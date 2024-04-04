@@ -1,3 +1,4 @@
+const coolThings = "the only cool thing is me, not Sean"
 const express = require('express');
 const session = require('express-session');
 const routes = require('./controllers');

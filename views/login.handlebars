@@ -1,0 +1,42 @@
+<div class="login-sidebar">
+  <!-- addtional info -->
+
+  <p></p>
+</div>
+<div class="login-form-container">
+  <!-- Main content: the login form -->
+  <form class="login-form" action="/login" method="post">
+    <div class="form-field">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+      />
+    </div>
+    <div class="form-field">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+    </div>
+    <div class="form-field">
+      <input type="checkbox" id="remember-me" name="remember-me" />
+      <label for="remember-me">Remember me</label>
+    </div>
+    <div class="form-field">
+      <button type="submit" class="login-button">Login</button>
+    </div>
+    <div class="login-links">
+      <a href="/forgot-password">Forgot Password?</a>
+      |
+      <a href="/signup">Sign up</a>
+    </div>
+  </form>
+</div>

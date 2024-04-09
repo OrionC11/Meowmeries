@@ -17,11 +17,7 @@ router.post('/', withAuth, async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const PostData = await Post.findAll({
-      where: {
-        user_id: req.session.user_id,
-      },
-    });
+    const PostData = await Post.findAll({});
 
     res.status(200).json(PostData);
   } catch (err) {

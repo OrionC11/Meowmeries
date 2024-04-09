@@ -29,15 +29,17 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "User",
+        model: 'user', 
         key: 'id',
       },
     },
-    sequelize, 
-    timestamps: false,
-    freezeTablName: true,
-    underscored: true,
-    modelName: 'Post',
-  })
+  },
+    {
+      sequelize, 
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'post',
+    })
 
   module.exports = Post;

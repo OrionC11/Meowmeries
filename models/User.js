@@ -45,7 +45,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        Last_name: {
+        last_name: {
             type: DataTypes.STRING,
             allowNull: false
 
@@ -61,7 +61,6 @@ User.init(
         cat_breed: {
             type: DataTypes.STRING,
             allowNull: true
-
         },
     },
 {
@@ -77,7 +76,7 @@ User.init(
     },
     sequelize, 
     timestamps: false,
-    freezeTablName: true,
+    freezeTableName: true,
     underscored: true,
     modelName: 'user',
 

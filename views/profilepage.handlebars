@@ -1,5 +1,11 @@
-
-{{#each posts as |post|}}
+<section id="profile-info">
+  <h1>First Name: {{user.first_name}} Last Name: {{user.last_name}}</h1>
+  <h2>{{user.first_name}}'s cat: {{user.cat_name}}</h2>
+  <p>{{user.cat_name}}'s Age: {{user.cat_age}}</p>
+  <p>{{user.cat_name}}'s Breed: {{user.cat_breed}}</p>
+</section>
+<section id="posts">
+{{#each user.posts as |post|}}
   <article class="post">
     <div class="post-header">
       <!-- Small text area for post title or user's name -->
@@ -11,7 +17,7 @@
       <div class="post-image">
         <!-- Assuming there is an image associated with each post -->
         {{#if post.image}}
-          <img src="{{post.image}}" alt="Post image" />
+        <img src="{{post.image}}" alt="Post image" />
         {{/if}}
       </div>
       <div class="post-body">

@@ -48,6 +48,10 @@ router.post('/signup', async (req, res) => {
 
 router.get('/login', (req, res) => {
     try {
+        if (req.session.logged_in) {
+        res.redirect('/');
+        return
+        }
         res.render('login');
     } catch(err) {
         res.status(500).json(err);
@@ -79,15 +83,17 @@ router.post('/login', async (req, res) => {
         res.status(400).json(err);
     }
 })
-
-router.get('/logout', (req, res) => {
-    if (req.session.logged_in) {
-        req.session.destroy(() => {
-            res.status(204).end();
-        })
-    } else {
-        res.status(404).end();
-    }
+  
+router.get('/:id/user', async (req, res) => {
+    const userData = await User.findByPk(req.params.id, {
+        include: [{ 
+            model: Post,
+            attributes: ['title', 'content', 'image'] 
+        }]
+    })
+    const user = userData.get({ plain: true });
+    res.render('profilepage', {
+        user,
+    })
 })
-
 module.exports = router;

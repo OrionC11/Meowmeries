@@ -1,11 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class Post extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
+
 }
 
 Post.init(
@@ -25,14 +22,14 @@ Post.init(
       allowNull: false,
     },
     image: {
-      type: DataTypes.BLOB(long),
+      type: DataTypes.BLOB(),
       allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: User,
+        model: "User",
         key: 'id',
       },
     },

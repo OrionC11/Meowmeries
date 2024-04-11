@@ -1,20 +1,62 @@
-   <div class="title">Meowmeries</div>
-    <form action="/signup" method="POST" class="container">
-        <div class="form-row">
-            <input id="su-user" type="text" name="username" placeholder="Username" required>
-            <input id="su-pass" type="password" name="password" placeholder="Password" required>
-        </div>
-        <div class="form-row">
-            <input id="su-FName" type="text" name="firstName" placeholder="First Name" required>
-            <input id="su-LName" type="text" name="lastName" placeholder="Last Name" required>
-        </div>
-        <div class="form-row">
-            <input id="su-email" type="email" name="email" placeholder="Email" required>
-            <input id="su-CName" type="text" name="catName" placeholder="Cat's Name">
-        </div>
-        <div class="form-row">
-            <input id="su-CBreed" type="text" name="catBreed" placeholder="Cat's Breed">
-            <input id="su-CAge" type="number" name="catAge" placeholder="Cat's Age" style="flex-grow: 1;">
-        </div>
-        <button id="suBtn" type="submit">Sign Up</button>
-    </form>
+<div class="title">Meowmeries</div>
+<form action="/api/user/signup" method="POST" class="container">
+  <div class="form-row">
+    <input
+      id="su-user"
+      type="text"
+      name="username"
+      placeholder="Username"
+      required
+    />
+    <input
+      id="su-pass"
+      type="password"
+      name="password"
+      placeholder="Password"
+      required
+    />
+  </div>
+  <div class="form-row">
+    <input
+      id="su-FName"
+      type="text"
+      name="first_name"
+      placeholder="First Name"
+      required
+    />
+    <input
+      id="su-LName"
+      type="text"
+      name="last_name"
+      placeholder="Last Name"
+      required
+    />
+  </div>
+  <div class="form-row">
+    <input
+      id="su-email"
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+    />
+    <input id="su-CName" type="text" name="cat_name" placeholder="Cat's Name" />
+  </div>
+  <div class="form-row">
+    <input
+      id="su-CBreed"
+      type="text"
+      name="cat_breed"
+      placeholder="Cat's Breed"
+    />
+    <input
+      id="su-CAge"
+      type="number"
+      name="cat_age"
+      placeholder="Cat's Age"
+      style="flex-grow: 1;"
+    />
+  </div>
+  <button id="suBtn" type="submit">Sign Up</button>
+</form>
+<script src="/js/signup.js"></script>

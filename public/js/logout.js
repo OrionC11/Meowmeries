@@ -3,7 +3,7 @@ const logout = async () => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
   });
-
+  console.log('bang')
   if (response.ok) {
     document.location.replace('/');
   } else {
@@ -11,4 +11,4 @@ const logout = async () => {
   }
 };
 
-document.querySelector('#logout').addEventListener('click', logout);
+document.querySelector('#logoutBtn').addEventListener('click', logout);

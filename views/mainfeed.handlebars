@@ -1,18 +1,28 @@
-
+{{#if logged_in}}
+  <div class="post-form">
+    <form action="/posts" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required />
+      <label for="content">Content:</label>
+      <textarea id="content" name="content" required></textarea>
+      <button type="submit">Post</button>
+    </form>
+  </div>
+{{/if}}
 {{#each posts as |post|}}
   <article class="post">
     <div class="post-header">
       <!-- Small text area for post title or user's name -->
       <h2>{{post.title}}</h2>
-      <h3>{{post.username}}</h3>
+      <a class="postUsername" href="/{{post.user.id}}/user">{{post.user.username}}</a>
 
     </div>
     <div class="post-content">
       <div class="post-image">
         <!-- Assuming there is an image associated with each post -->
-        {{#if post.image}}
+        {{!-- {{#if post.image_id}}
           <img src="{{post.image}}" alt="Post image" />
-        {{/if}}
+        {{/if}} --}}
       </div>
       <div class="post-body">
         <!-- Larger text area for the content of the post -->

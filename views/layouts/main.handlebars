@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meowsmeries</title>
+    <title>Meowmories</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
@@ -12,7 +12,7 @@
       <nav>
         <a href="/">Home</a>
         {{#if logged_in}}
-          <button id="logout" class="btn-no-style">Logout</button>
+          <a id="logoutBtn" class="btn-no-style" href="/">Logout</a>
         {{else}}
           <a href="/login"> Login</a>
         {{/if}}
@@ -21,7 +21,10 @@
     <main>
       {{{body}}}
     </main>
-    <script src="/js/logout.js"></script>
+    {{#if logged_in}}
+      <script src="../../public/js/logout.js"></script>
+      <script src="/js/logout.js"></script>
+    {{/if}}
 
   </body>
 </html>

@@ -1,8 +1,8 @@
-const router = require('express').Router();
-const { Post } = require('../../models');
-const withAuth = require('../../utils/auth');
+const router = require("express").Router();
+const { User, Post } = require("../../models");
+const withAuth = require("../../utils/auth");
 
-router.post('/', withAuth, async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const newPost = await Post.create({
       ...req.body,
@@ -17,15 +17,21 @@ router.post('/', withAuth, async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const PostData = await Post.findAll({});
+    const PostData = await Post.findAll({
+      include: [
+        {
+          model: User,
+        },
+      ],
+    });
 
     res.status(200).json(PostData);
   } catch (err) {
     res.status(500).json(err);
   }
-})
+});
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const PostData = await Post.destroy({
       where: {
@@ -35,7 +41,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!PostData) {
-      res.status(404).json({ message: 'No Post found with this id!' });
+      res.status(404).json({ message: "No Post found with this id!" });
       return;
     }
 

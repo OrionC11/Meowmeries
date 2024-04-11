@@ -1,6 +1,6 @@
 {{#if logged_in}}
   <div class="post-form">
-    <form action="/posts" method="POST">
+    <form action="/api/posts" method="POST">
       <label for="title">Title:</label>
       <input type="text" id="title" name="title" required />
       <label for="content">Content:</label>
@@ -14,7 +14,10 @@
     <div class="post-header">
       <!-- Small text area for post title or user's name -->
       <h2>{{post.title}}</h2>
-      <a class="postUsername" href="/{{post.user.id}}/user">{{post.user.username}}</a>
+      <a
+        class="postUsername"
+        href="/user/{{post.user.id}}"
+      >{{post.user.username}}</a>
 
     </div>
     <div class="post-content">

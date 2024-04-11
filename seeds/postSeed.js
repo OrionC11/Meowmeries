@@ -10,7 +10,7 @@ const postData =
   {
     title: "Mr Whiskers take a bath",
     content: "Mr Whiskers loves bathtime!",
-    user_id: 1
+    user_id: 2
   }, 
   {
     title: "My cat loves to play",

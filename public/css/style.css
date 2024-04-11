@@ -1,23 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+
 html {
-    line-height: 1.15;
-    
-    -webkit-text-size-adjust: 100%;
-    
-  }
+  line-height: 0.85;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6d2d4e1;
+}
+
+h1 {
+  color:#531f9caf;
+  font-size: 70px;
+  font-family: "gloria-hallelujah", cursive;
   
+}
+
+
+h2 {
+
+  font-family: "gloria-hallelujah", cursive;
+  padding: 2px;
+}
+
+
+nav {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #8d74af;
+  color: #dab2b6;
+  text-align: center;
+  font-size: 20px;
+}
   
-  body {
-    margin: 0;
-  }
+nav a {
+  text-decoration: none;
+  color: #531f9caf;
+  border-style: outset;
+  padding: 30px;
+  border-radius: 28px;
+  background-color: #ec81ac;
+  border-color: #ca668e;
+  font-family: "gloria-hallelujah", cursive;
+
+
   
+}
+
+
+
+
+
+/* utility classes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.post {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #ffffff69;
+  width: 60vw;
+
+
+
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+}
+
+.postUsername  {
   
-  main {
-    display: block;
-  }
+  margin: 0px;
+  padding: 0px;
+  color: black;
+
   
+
+
+}
+
+.post-content {
+  margin: 6px;
+  border: 1px solid lightgray;
+  padding: 10px ;
+  text-align: left;
+}
+
+
+
+
+
+.hero {
+  background-color: #dab2b6;
+  color: #2d587e;
+  padding: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-1 {
+  margin-bottom: 0.375rem;
+}
+
+.pb-3 {
+  padding-bottom: 1rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-primary {
+  color:()/* adjust color */ !important;
+}
+
+.bg-primary {
+  background-color:()/* adjust color */ !important;
+}
+
+.btn {
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  outline: none;
+  color:()/* adjust color */;
+  background-color: ()/* adjust color */;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color:()/* adjust color */;
+}
+
+/* flexbox layout */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+
+#title {
+  height: 5vw;
+  width: 40vw;
+  margin-left: 24px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#content {
+  height: 20vw;
+  width: 40vw;
+  margin-left: 3px;
+  margin-bottom: 5px;
   
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
-  
+}
+
+#postBtn {
+  align-self: center;
+}

@@ -1,6 +1,9 @@
+<div class="row">
 <div class="su-title">Create your profile!</div>
+
+</div>
 <form action="/api/user/signup" method="POST" class="container">
-  <div class="form-row">
+  <div class="row">
     <input
       id="su-user"
       type="text"
@@ -16,7 +19,7 @@
       required
     />
   </div>
-  <div class="form-row">
+  <div class="row">
     <input
       id="su-FName"
       type="text"
@@ -32,7 +35,7 @@
       required
     />
   </div>
-  <div class="form-row">
+  <div class="row">
     <input
       id="su-email"
       type="email"
@@ -42,7 +45,7 @@
     />
     <input id="su-CName" type="text" name="cat_name" placeholder="Cat's Name" />
   </div>
-  <div class="form-row">
+  <div class="row">
     <input
       id="su-CBreed"
       type="text"
@@ -57,6 +60,9 @@
       style="flex-grow: 1;"
     />
   </div>
+  <div class="row">
   <button id="suBtn" type="submit">Sign Up</button>
+
+  </div>
 </form>
 <script src="/js/signup.js"></script>

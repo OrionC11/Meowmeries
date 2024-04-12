@@ -1,9 +1,11 @@
 <section id="profile-info">
-  <img src="https://cataas.com/cat" alt="Random Cat Pictures" />
-  <h2>First Name: {{user.first_name}} Last Name: {{user.last_name}}</h2>
-  <h3>{{user.first_name}}'s cat: {{user.cat_name}}</h3>
-  <p>{{user.cat_name}}'s Age: {{user.cat_age}}</p>
-  <p>{{user.cat_name}}'s Breed: {{user.cat_breed}}</p>
+  <img src="https://cataas.com/cat" 
+    class="profile-cat"
+    alt="Random Cat Pictures" />
+  <h2 class="profile-fn"  >Full Name: {{user.first_name}} {{user.last_name}}</h2>
+  <h3 class="profile-cn">{{user.first_name}}'s cat: {{user.cat_name}}</h3>
+  <p class="profile-ca">{{user.cat_name}}'s Age: {{user.cat_age}}</p>
+  <p class="profile-cb">{{user.cat_name}}'s Breed: {{user.cat_breed}}</p>
 </section>
 <section id="posts">
 {{#each user.posts as |post|}}
@@ -16,14 +18,11 @@
     </div>
     <div class="post-content">
       <div class="post-image">
-        <!-- Assuming there is an image associated with each post -->
-        {{!-- {{#if post.image_id}}
-        <img src="{{post.image}}" alt="Post image" />
-        {{/if}} --}}
+        
       </div>
       <div class="post-body">
         <!-- Larger text area for the content of the post -->
-        <p>{{post.content}}</p>
+        <p class="post-text">{{post.content}}</p>
         <!-- Add other post content like buttons or links -->
       </div>
     </div>

@@ -244,7 +244,7 @@ input {
 
 
 #title {
-  height: 5vw;
+  height: 3vw;
   width: 40vw;
   margin-left: 24px;
   margin-bottom: 5px;
@@ -253,7 +253,7 @@ input {
 }
 
 #content {
-  height: 20vw;
+  height: 10vw;
   width: 40vw;
   margin-left: 3px;
   margin-bottom: 5px;
